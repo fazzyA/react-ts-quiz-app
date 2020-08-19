@@ -5,6 +5,7 @@ this.addEventListener("install", (event) => {
             cache.addAll([
                 '/static/js/main.chunk.js',
                 '/static/js/0.chunk.js',
+                '/static/js/main.0520266b.chunk.js',
                 '/static/js/1.chunk.js',
                 '/static/js/bundle.js',
                 '/static/css/main.chunk.css',
