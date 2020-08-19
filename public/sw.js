@@ -4,6 +4,7 @@ this.addEventListener("install", (event) => {
         caches.open(cacheData).then((cache) => {
             cache.addAll([
                 '/static/js/main.chunk.js',
+                '/static/js/0.chunk.js',
                 '/static/js/1.chunk.js',
                 '/static/js/bundle.js',
                 '/static/css/main.chunk.css',
@@ -19,14 +20,21 @@ this.addEventListener("install", (event) => {
 this.addEventListener("fetch", (event) => {
 
 
-    // console.warn("url",event.request.url)
+     console.warn("url",event.request.url)
 
+     if (event.request.url === "http://localhost:3000/" && navigator.onLine) {
+      event.waitUntil(
+          this.registration.showNotification("Internet", {
+              body: "application is working in online mode",
+          })
+      )
+  }
 
     if (!navigator.onLine) {
-        if (event.request.url === "http://localhost:3000/static/js/main.chunk.js") {
+        if (event.request.url === "http://localhost:3000/") {
             event.waitUntil(
                 this.registration.showNotification("Internet", {
-                    body: "internet not working",
+                    body: "application is working in offline mode",
                 })
             )
         }
