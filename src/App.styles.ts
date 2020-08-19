@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: #9F9F9F;
+    background-color: #e3e3e3;
     margin: 0;
     padding: 0 20px;
     display: flex;
@@ -37,7 +37,7 @@ export const Wrapper = styled.div`
 
   h1 {
     font-family: Verdana;
-    background-image: linear-gradient(180deg, #fff, #87f1ff);
+    background-image: linear-gradient(180deg, #0085a3, #8987ff);
     font-weight: 400;
     background-size: 100%;
     background-clip: text;
@@ -52,14 +52,15 @@ export const Wrapper = styled.div`
   }
 
   .start, .next {
+    font-size: 22px;
     cursor: pointer;
-    background: linear-gradient(180deg, #ffffff, #ffcc91);
-    border: 2px solid #d38558;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(180deg, #ffffff, #b7b5b5);
+    border: 2px solid #757575;
+    box-shadow: 0px 5px 10px #9f9f9f;
     border-radius: 10px;
-    height: 40px;
+    height: 50px;
     margin: 20px 0;
-    padding: 0 40px;
+    padding: 0 50px;
   }
 
   .start {
